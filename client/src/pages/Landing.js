@@ -146,7 +146,7 @@ const Landing = () => {
       </section>
       <section className="mt-[80px]  m-auto  max-w-[var(--max-width)]  flex flex-col md:flex-row md:items-stretch gap-4 w-10/12 h-full">
         <div className="md:w-6/12 ">
-          <h1 className="font-extrabold text-transparent text-center md:text-6xl bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400">
+          <h1 cclassName="font-extrabold text-transparent text-center md:text-6xl bg-clip-text bg-gradient-to-r from-[var(--primary-fade-start)] to-[var(--primary-fade-end)]">
             {" "}
             {token ? `Hi ${user.userName}, ` : ""}Welcome to pay2Sub
           </h1>

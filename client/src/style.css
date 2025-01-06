@@ -38,6 +38,9 @@ html {
   --primary-800: #000066;
   --primary-900: #000033;
 
+  --primary-fade-start: var(--primary-300);
+  --primary-fade-end: var(--primary-700);
+
   /* grey */
   --grey-50: #f8fafc;
   --grey-100: #f1f5f9;
@@ -363,8 +366,7 @@ h3 {
   }
 }
 .title {
-  @apply text-2xl font-extrabold text-transparent text-center md:text-4xl bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400;
-  /* @apply text-2xl font-extrabold text-transparent text-center md:text-4xl bg-clip-text bg-gradient-to-r from-[#6274E7] to-[#8752A3]; */
+  @apply text-2xl font-extrabold text-transparent text-center md:text-4xl bg-clip-text bg-gradient-to-r from-[var(--primary-fade-start)] to-[var(--primary-fade-end)];
   text-transform: uppercase;
 }
 .container {
