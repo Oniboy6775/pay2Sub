@@ -347,18 +347,6 @@ h2,
 h3 {
   font-family: var(--headingFont);
 }
-/* button {
-  text-transform: uppercase !important;
-  border-radius: var(--borderRadius);
-  border: none;
-  padding: 0.3em;
-  background-color: var(--primary-500);
-  padding: 0.5em;
-  margin: 1rem;
-  color: var(--white);
-  box-shadow: var(--shadow-4);
-  transition: var(--transition);
-} */
 @media (min-width: 600px) {
   button:hover {
     opacity: 0.9;
@@ -383,7 +371,6 @@ svg {
 }
 
 .marquee {
-  /* line-height: 50px; */
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;

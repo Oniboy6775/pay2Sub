@@ -81,7 +81,6 @@ const DashBoard = () => {
               {user.userName && user.userName.substring(0, 15)}
             </p>
             <small className="font-bold">
-              {" "}
               {user.userName && `₦${user.balance.toFixed(2)}`}
             </small>
           </div>
@@ -93,15 +92,6 @@ const DashBoard = () => {
             >
               fund your wallet
             </button>
-            {!user.bvn && !user.nin && (
-              <button
-                className="btn btn-danger"
-                onClick={() => setKycModal(true)}
-              >
-                update kyc
-              </button>
-            )}
-            {kycModal && <KYCModals close={() => setKycModal(!kycModal)} />}
           </div>
         </div>
       </div>

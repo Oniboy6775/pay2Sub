@@ -141,8 +141,10 @@ const login = async (req, res) => {
   if (!isPasswordCorrect)
     return res.status(400).json({ msg: "Incorrect password" });
   // generate account number
-  if (user.accountNumbers.length < 1)
+  if (user.accountNumbers.length < 1) {
     generateBillStackAcc({ bankName: "palmpay", userId: user._id });
+    generateBillStackAcc({ bankName: "9psb", userId: user._id });
+  }
 
   const token = user.createJWT();
   const isReseller = user.userType === "reseller";
