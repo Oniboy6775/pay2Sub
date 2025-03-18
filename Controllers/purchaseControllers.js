@@ -137,15 +137,7 @@ const buyData = async (req, res) => {
   if (status) {
     console.log({ ...data });
     receipt = await generateReceipt({
-      // ...data,
-      // amountToCharge,
-      // userId,
-      // mobile_number,
-      // balance,
-      // userName: user.userName,
-      // type: "data",
-      // costPrice,
-      transactionId: uuid(),
+      transactionId: transactionId,
       planNetwork: NETWORK,
       planName: `${plan_type} ${dataVolume}`,
       phoneNumber: mobile_number,
@@ -156,7 +148,9 @@ const buyData = async (req, res) => {
       userName: user.userName,
       type: "data",
       volumeRatio: volumeRatio,
-      costPrice,
+      costPrice: planCostPrice || costPrice * volumeRatio || amountToCharge,
+      response: msg || "",
+      planType: plan_type,
       ...data,
     });
   }
