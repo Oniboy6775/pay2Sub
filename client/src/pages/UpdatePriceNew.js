@@ -95,7 +95,7 @@ const UpdatePriceNew = () => {
             <div className="loading"></div>
           ) : (
             selectedNetwork != "select" &&
-            availablePlans.length > 0 && (
+            availablePlans?.length > 0 && (
               <>
                 <div className="flex justify-center items-center">
                   <h2 className="text-center font-bold text-2xl m-2 normal-case">
